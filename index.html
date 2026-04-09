@@ -587,6 +587,14 @@ function filterTable(tbodyId,q){
 }
 
 document.getElementById('login-pass').addEventListener('keypress',function(e){if(e.key==='Enter')doLogin();});
+// Entrar automaticamente
+window.addEventListener('load', function(){
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('app').style.display='block';
+  document.getElementById('sidebar-user').textContent='Administrador';
+  currentUser='admin';
+  updateDashboard();updateVendaSelects();
+});
 </script>
 </body>
 </html>
